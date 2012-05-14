@@ -38,7 +38,7 @@ module Samurai::Rails
         #   end
         class_eval <<-__METHOD__
           def #{partial}_file
-            Pathname.new('#{__FILE__}').dirname.join('../../..', 'app', 'views', 'application', "_#{partial}.html.erb").to_s
+            Pathname.new('#{__FILE__}').dirname.join('../../..', 'app', 'views', 'application', "_#{partial}").to_s
           end
         __METHOD__
 
